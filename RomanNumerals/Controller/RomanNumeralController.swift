@@ -19,7 +19,8 @@ public enum ConverterError: Error {
 
 class RomanNumeralController: NumeralController {
     func convertToRomanNumeral(for Int: String, completion: (String?, ConverterError?) -> Void) {
-        guard let intToConvert = Int.toInt, intToConvert <= 99999 else {
+        guard let intToConvert = Int.toInt, (1...99999).contains(intToConvert) else {
+            //roman numbers do not have 0 and max representation, I have included range to limit responses
             completion(nil, ConverterError.invalidInt(Int))
             return 
         }
@@ -59,11 +60,15 @@ class RomanNumeralController: NumeralController {
 
 extension String {
     var toInt: Int? {
-        guard let intValue = Int(self.trimmingCharacters(in: .whitespacesAndNewlines)) else {
-            print("cannot convert String to Int")
-            return nil
+        let formatter = NumberFormatter()
+        if self.contains(".") || self.contains(","){
+            formatter.numberStyle = .decimal
+            formatter.roundingMode = .up 
+            return formatter.number(from: self.trimmingCharacters(in: .whitespacesAndNewlines))?.intValue
+        } else {
+            formatter.numberStyle = .none
+            return formatter.number(from: self.trimmingCharacters(in: .whitespacesAndNewlines))?.intValue
         }
-        return intValue
     }
 }
 
