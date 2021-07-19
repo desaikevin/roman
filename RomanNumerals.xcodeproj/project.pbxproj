@@ -15,6 +15,8 @@
 		9C6E79B026A5FA7700AEDD1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C6E79AE26A5FA7700AEDD1B /* LaunchScreen.storyboard */; };
 		9C6E79BB26A5FA7700AEDD1B /* RomanNumeralsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6E79BA26A5FA7700AEDD1B /* RomanNumeralsTests.swift */; };
 		9C6E79C626A5FA7700AEDD1B /* RomanNumeralsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6E79C526A5FA7700AEDD1B /* RomanNumeralsUITests.swift */; };
+		9C6E79D826A5FC1E00AEDD1B /* RomanNumeralController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6E79D726A5FC1E00AEDD1B /* RomanNumeralController.swift */; };
+		9C6E79DA26A5FD0F00AEDD1B /* NumeralModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6E79D926A5FD0F00AEDD1B /* NumeralModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		9C6E79C126A5FA7700AEDD1B /* RomanNumeralsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RomanNumeralsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C6E79C526A5FA7700AEDD1B /* RomanNumeralsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomanNumeralsUITests.swift; sourceTree = "<group>"; };
 		9C6E79C726A5FA7700AEDD1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C6E79D726A5FC1E00AEDD1B /* RomanNumeralController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomanNumeralController.swift; sourceTree = "<group>"; };
+		9C6E79D926A5FD0F00AEDD1B /* NumeralModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumeralModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 		9C6E79A226A5FA7600AEDD1B /* RomanNumerals */ = {
 			isa = PBXGroup;
 			children = (
+				9C6E79D626A5FC0300AEDD1B /* Controller */,
+				9C6E79D326A5FB9700AEDD1B /* Model */,
 				9C6E79A326A5FA7600AEDD1B /* AppDelegate.swift */,
 				9C6E79A526A5FA7600AEDD1B /* SceneDelegate.swift */,
 				9C6E79A726A5FA7600AEDD1B /* ContentView.swift */,
@@ -134,6 +140,22 @@
 				9C6E79C726A5FA7700AEDD1B /* Info.plist */,
 			);
 			path = RomanNumeralsUITests;
+			sourceTree = "<group>";
+		};
+		9C6E79D326A5FB9700AEDD1B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9C6E79D926A5FD0F00AEDD1B /* NumeralModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9C6E79D626A5FC0300AEDD1B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9C6E79D726A5FC1E00AEDD1B /* RomanNumeralController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +288,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C6E79DA26A5FD0F00AEDD1B /* NumeralModel.swift in Sources */,
+				9C6E79D826A5FC1E00AEDD1B /* RomanNumeralController.swift in Sources */,
 				9C6E79A426A5FA7600AEDD1B /* AppDelegate.swift in Sources */,
 				9C6E79A626A5FA7600AEDD1B /* SceneDelegate.swift in Sources */,
 				9C6E79A826A5FA7600AEDD1B /* ContentView.swift in Sources */,

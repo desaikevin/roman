@@ -8,9 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var numberInput: String = "0"
+    @ObservedObject var romanNumeralModel = RomanNumeralModel()
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack{
+            TextField("Enter number to transform", text: $numberInput, onEditingChanged: { (_) in }) {
+                if !self.numberInput.isEmpty {
+                    self.romanNumeralModel.convert(int: self.numberInput)
+                }
+            }
+            Divider()
+            Text(romanNumeralModel.convertedRomanNumeral).font(.body)
+        }.padding()
     }
 }
 
